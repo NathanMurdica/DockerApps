@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Counter</title>
+  
+</head>
+<body>
+  <h1>Click Counter</h1>
+  <p id="counter">Button clicked 0 times.</p>
+  <button onclick="incrementCounter()">Click me!</button>
+  <button onclick="decrementCounter()">Undo Click</button>
+  <button onclick="resetCounter()">Reset</button>
+
+  <script>
+    let count = 0;
+    function incrementCounter() {
+      count++;
+      document.getElementById("counter").textContent =
+        `Button clicked ${count} ${count === 1 ? "time" : "times"}.`;
+    }
+    function decrementCounter() {
+      count--;
+      document.getElementById("counter").textContent =
+        `Button clicked ${count} ${count === 1 ? "time" : "times"}.`;
+    }
+    function resetCounter() {
+      count = 0;
+      document.getElementById("counter").textContent =
+        `Button clicked ${count} times.`;
+    }
+  </script>
+</body>
+</html>
